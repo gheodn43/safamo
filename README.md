@@ -1,0 +1,2 @@
+# safamo
+Apartment management
