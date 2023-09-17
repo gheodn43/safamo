@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
 
         <p>
-          hello tuan 
+          hello tuan 222
         </p>
       </header>
     </div>
