@@ -10,7 +10,13 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,12 +34,13 @@
     <title>React App</title>
   </head>
   <body>
+    <!-- Navbar cho project cua minh -->
     <div class="navbar">
       <a href="#rent">Rent</a>
       <a href="#shared-accommodation">Shared Accommodation</a>
       <a href="#agent-finder">Agent Finder</a>
       <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo" />
       </div>
       <a href="#manage-rentals">Manage Rentals</a>
       <a href="#profile">Profile</a>
@@ -46,89 +53,120 @@
         </div>
       </div>
     </div>
-    
-    <div class="content">
-      <h2>Content goes here</h2>
-      <p>This is the main content of your page.</p>
-    </div>
+    <!-- Hinh anh co slider -->
     <div class="slider-container">
       <div class="slider">
-        <img src="img/phuongnam.jpg" alt="Image 1">
+        <img
+          style="width: 75%; height: 75%; display: flex"
+          src="img/hh1_1632716401.jpg"
+          alt="slider1"
+        />
         <div class="text">Welcome to our rental platform!</div>
       </div>
-    
+
       <div class="slider">
-        <img src="img/phuongnam2.jpg" alt="Image 2">
+        <img
+          style="width: 75%; height: 75%; display: flex"
+          src="img/hh2_1632716407.jpg"
+          alt="slider2"
+        />
         <div class="text">Find your perfect home.</div>
       </div>
-    
+
       <div class="slider">
-        <img src="img/test.png" alt="Image 3">
+        <img
+          style="width: 75%; height: 75%; display: flex"
+          src="img/z3362480429968-e7d46d5407eaabb7f518f912e5c80763_1650730635.jpg"
+          alt="slider3"
+        />
         <div class="text">Explore and discover great rentals.</div>
       </div>
     </div>
-    
+
+    <!-- Link JavaScript -->
     <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
 
     <div class="container">
+      <div class="row">
       <section class="favorite-rooms">
         <h2>Phòng được ưa thích nhất</h2>
-        <div class="room-card">
-          <img src="room1.jpg" alt="Room 1">
+        <div class="room-card col-md-6">
+          <img src="img/hh1_1632716401.jpg" alt="Room 1" />
           <h3>Phòng 1</h3>
           <p>Phòng rộng, thoáng, view đẹp.</p>
         </div>
-        
-        <div class="room-card">
-          <img src="room2.jpg" alt="Room 2">
+
+        <div class="room-card col-md-6">
+          <img src="img/hh2_1632716407.jpg" alt="Room 2" />
           <h3>Phòng 2</h3>
           <p>Phòng tiện nghi, giá hợp lý.</p>
         </div>
-        
+
         <!-- Add more room cards as needed -->
       </section>
-    
+      </div>
+       
+      <div class="row">
       <section class="available-rooms">
         <h2>Phòng đang trống</h2>
-        <div class="room-card">
-          <img src="room3.jpg" alt="Room 3">
+        <div class="room-card col-md-8">
+          <img
+            src="img/z3362480429968-e7d46d5407eaabb7f518f912e5c80763_1650730635.jpg"
+            alt="Room 3"
+          />
           <h3>Phòng 3</h3>
           <p>Phòng gần trường, an ninh tốt.</p>
         </div>
-    
-        <div class="room-card">
-          <img src="room4.jpg" alt="Room 4">
+
+        <div class="room-card col-md-4">
+          <img src="img/hh5_1632716410.jpg" alt="Room 4" />
           <h3>Phòng 4</h3>
           <p>Phòng mới, nội thất đầy đủ.</p>
         </div>
-        
+
         <!-- Add more room cards as needed -->
       </section>
+      </div>
     </div>
+
+    <!-- Footer cua project nhom minh -->
     <footer>
-      <div class="container footer">
+      <div class="container">
         <div class="footer-content">
           <div class="footer-section">
             <h3>About Us</h3>
             <p>We are dedicated to providing the best rental experience.</p>
           </div>
-          
+
           <div class="footer-section">
             <h3>Contact Us</h3>
             <p>Email: info@example.com</p>
             <p>Phone: 123-456-7890</p>
           </div>
-    
+
           <!-- Add more footer sections as needed -->
         </div>
-        
-        <div class="footer-bottom">
-          &copy; 2023 Your Website | Designed by You
-        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2023 Your Website | Designed by You
       </div>
     </footer>
-    
-    
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
