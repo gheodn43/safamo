@@ -10,6 +10,7 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="css/style.css">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,6 +28,107 @@
     <title>React App</title>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#rent">Rent</a>
+      <a href="#shared-accommodation">Shared Accommodation</a>
+      <a href="#agent-finder">Agent Finder</a>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <a href="#manage-rentals">Manage Rentals</a>
+      <a href="#profile">Profile</a>
+      <div class="dropdown">
+        <button class="dropbtn">Tài khoản</button>
+        <div class="dropdown-content">
+          <a href="#profile">Profile</a>
+          <a href="#settings">Settings</a>
+          <a href="#logout">Logout</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <h2>Content goes here</h2>
+      <p>This is the main content of your page.</p>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="img/phuongnam.jpg" alt="Image 1">
+        <div class="text">Welcome to our rental platform!</div>
+      </div>
+    
+      <div class="slider">
+        <img src="img/phuongnam2.jpg" alt="Image 2">
+        <div class="text">Find your perfect home.</div>
+      </div>
+    
+      <div class="slider">
+        <img src="img/test.png" alt="Image 3">
+        <div class="text">Explore and discover great rentals.</div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <div class="container">
+      <section class="favorite-rooms">
+        <h2>Phòng được ưa thích nhất</h2>
+        <div class="room-card">
+          <img src="room1.jpg" alt="Room 1">
+          <h3>Phòng 1</h3>
+          <p>Phòng rộng, thoáng, view đẹp.</p>
+        </div>
+        
+        <div class="room-card">
+          <img src="room2.jpg" alt="Room 2">
+          <h3>Phòng 2</h3>
+          <p>Phòng tiện nghi, giá hợp lý.</p>
+        </div>
+        
+        <!-- Add more room cards as needed -->
+      </section>
+    
+      <section class="available-rooms">
+        <h2>Phòng đang trống</h2>
+        <div class="room-card">
+          <img src="room3.jpg" alt="Room 3">
+          <h3>Phòng 3</h3>
+          <p>Phòng gần trường, an ninh tốt.</p>
+        </div>
+    
+        <div class="room-card">
+          <img src="room4.jpg" alt="Room 4">
+          <h3>Phòng 4</h3>
+          <p>Phòng mới, nội thất đầy đủ.</p>
+        </div>
+        
+        <!-- Add more room cards as needed -->
+      </section>
+    </div>
+    <footer>
+      <div class="container footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are dedicated to providing the best rental experience.</p>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: 123-456-7890</p>
+          </div>
+    
+          <!-- Add more footer sections as needed -->
+        </div>
+        
+        <div class="footer-bottom">
+          &copy; 2023 Your Website | Designed by You
+        </div>
+      </div>
+    </footer>
+    
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
