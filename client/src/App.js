@@ -32,9 +32,6 @@ function App() {
       ) : (
         ""
       )}
-      <div class="Phuong Nam">
-          <h1>Phuong Nam hello</h1>
-      </div>
     </div>
   );
 }

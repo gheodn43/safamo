@@ -63,3 +63,90 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    display: none;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .favorite-rooms, .available-rooms {
+    margin-bottom: 30px;
+  }
+  
+  .room-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .room-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .room-card h3 {
+    margin: 10px 0;
+  }
+  
+  .room-card p {
+    margin: 0;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    width: 30%;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    margin: 0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+  }
