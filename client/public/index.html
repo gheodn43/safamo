@@ -10,6 +10,7 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="css/style.css">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,6 +28,30 @@
     <title>React App</title>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#rent">Rent</a>
+      <a href="#shared-accommodation">Shared Accommodation</a>
+      <a href="#agent-finder">Agent Finder</a>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <a href="#manage-rentals">Manage Rentals</a>
+      <a href="#profile">Profile</a>
+      <div class="dropdown">
+        <button class="dropbtn">Tài khoản</button>
+        <div class="dropdown-content">
+          <a href="#profile">Profile</a>
+          <a href="#settings">Settings</a>
+          <a href="#logout">Logout</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <h2>Content goes here</h2>
+      <p>This is the main content of your page.</p>
+    </div>
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
