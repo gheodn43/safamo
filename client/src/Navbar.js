@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
+import FacebookLoginComponent from "./FacebookLogin.js";
 import logo from './img/logo.png'; // Import hình ảnh
-
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -18,8 +18,8 @@ const Navbar = () => {
         <div className="dropdown-content">
           <a href="#profile">Profile</a>
           <a href="#settings">Settings</a>
-          <a href="http://localhost:3000/facebook-login">Đăng nhập Facebook</a>
-          {/* Điều hướng đến trang Facebook login */}
+          <a href="#login"><FacebookLoginComponent/></a>
+          <a href="#guess">Guess</a>
           <a href="#logout">Logout</a>
         </div>
       </div>

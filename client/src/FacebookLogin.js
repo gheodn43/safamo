@@ -1,45 +1,32 @@
 import React from 'react';
-import { useState } from "react";
-import { LoginSocialFacebook } from "reactjs-social-login";
-import { FacebookLoginButton } from "react-social-login-buttons";
-// import { Switch, Route } from 'react-router-dom'; // Import Switch và Route
 
+
+window.fbAsyncInit = function() {
+    window.FB.init({
+      appId: '239029875760778',
+      autoLogAppEvents: true,
+      xfbml: true,
+      version: 'v18.0'
+    });
+  };
 const FacebookLoginComponent = () => {
-  const [profile, setProfile] = useState(null);
-
-  return (
-    // <Switch> {/* Sử dụng Switch để bọc các Route */}
-      // <Route exact path="/">
+    const handleFacebookLogin = () => {
+        if (window.FB) {
+            window.FB.login(
+              response => {
+                // Xử lý kết quả
+              },
+              { scope: 'public_profile,email' }
+            );
+          } else {
+            console.error('SDK của Facebook chưa tải hoặc chưa khởi tạo.');
+          }
+      };
+      
+      return (
         <div>
-          {!profile ? (
-            <LoginSocialFacebook
-              appId={process.env.REACT_APP_FACEBOOK_APP_ID}
-              onResolve={(response) => {
-                console.log(response);
-                setProfile(response.data);
-              }}
-              onReject={(error) => {
-                console.log(error);
-              }}
-            >
-              <FacebookLoginButton />
-            </LoginSocialFacebook>
-          ) : (
-            ""
-          )}
-
-          {profile ? (
-            <div>
-              <h1>{profile.name}</h1>
-              <img src={profile.picture.data.url} alt={profile.name} />
-            </div>
-          ) : (
-            ""
-          )}
+          <button onClick={handleFacebookLogin}>Đăng nhập Facebook</button>
         </div>
-      // </Route>
-    // </Switch>
-  );
-};
-
+      );
+}
 export default FacebookLoginComponent;
