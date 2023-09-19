@@ -1,23 +1,33 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slider');
+const sliders = document.querySelectorAll('.slider');
+let currentIndex = 0;
 
-function showSlide(index) {
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove('active');
-  }
-  slides[index].classList.add('active');
-}
+const prevSlide = () => {
+  sliders[currentIndex].style.animation = 'none';
+  setTimeout(() => {
+    sliders[currentIndex].style.animation = '';
+    currentIndex = (currentIndex - 1 + sliders.length) % sliders.length;
+    updateSlider();
+  }, 10);
+};
 
-function showNextSlide() {
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
-  showSlide(slideIndex);
-}
+const nextSlide = () => {
+  sliders[currentIndex].style.animation = 'none';
+  setTimeout(() => {
+    sliders[currentIndex].style.animation = '';
+    currentIndex = (currentIndex + 1) % sliders.length;
+    updateSlider();
+  }, 10);
+};
 
-// Initial slide display
-showSlide(slideIndex);
+const updateSlider = () => {
+  sliders.forEach((slider, index) => {
+    if (index === currentIndex) {
+      slider.style.transform = 'translateX(0)';
+    } else {
+      slider.style.transform = 'translateX(-100%)';
+    }
+  });
+};
 
-// Automatically change slide every 2 seconds
-setInterval(showNextSlide, 2000);
+document.querySelector('.prev-slide').addEventListener('click', prevSlide);
+document.querySelector('.next-slide').addEventListener('click', nextSlide);
