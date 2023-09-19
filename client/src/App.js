@@ -1,38 +1,27 @@
-import { useState } from "react";
-import { LoginSocialFacebook } from "reactjs-social-login";
-import { FacebookLoginButton } from "react-social-login-buttons";
+import React from "react";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from './Navbar';
+import Slider from './Slider';
+import RoomCards from './RoomCards';
+import Footer from './Footer';
+// import FacebookLoginComponent from "./FacebookLogin"; 
+import './style.css';
 
 function App() {
-  const [profile, setProfile] = useState(null);
-
   return (
-    <div>
-      {!profile ? (
-        <LoginSocialFacebook
-          appId = {process.env.REACT_APP_FACEBOOK_APP_ID}
-          onResolve={(response) => {
-            console.log(response);
-            setProfile(response.data);
-          }}
-          onReject={(error) => {
-            console.log(error);
-          }}
-        >
-          <FacebookLoginButton />
-        </LoginSocialFacebook>
-      ) : (
-        ""
-      )}
-
-      {profile ? (
-        <div>
-          <h1>{profile.name}</h1>
-          <img src={profile.picture.data.url} />
-        </div>
-      ) : (
-        ""
-      )}
-    </div>
+    // <Router>
+      <div>
+        <Navbar />
+        {/* <Switch> */}
+          {/* <Route path="/facebook-login" component={FacebookLoginComponent} /> */}
+          {/* <Route exact path="/" component={Slider} /> */}
+          {/* ... các route khác ... */}
+        {/* </Switch> */}
+        <Slider />
+        <RoomCards />
+        <Footer />
+      </div>
+    // </Router>
   );
 }
 
