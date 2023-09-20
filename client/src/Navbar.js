@@ -1,8 +1,7 @@
 import React from 'react';
 import './style.css';
 import logo from './img/logo.png';
-import { Link } from 'react-router-dom';
-import './Login.js';
+// import { Link } from 'react-router-dom';
 
 const Navbar = ({ isLoggedIn }) => {
   const handleLogoClick = () => {
