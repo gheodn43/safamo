@@ -15,7 +15,7 @@ class Login extends Component {
           {/* Form đăng nhập */}
           <form>
             <input type="text" placeholder="Tên đăng nhập" />
-            <input type="password" placeholder="Mật khẩu" />
+            <input type="password" placeholder="Mật khẩu hehe" />
             <button onClick={this.handleLogin}>Đăng nhập</button>
           </form>
 
