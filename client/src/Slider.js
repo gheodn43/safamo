@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import sliderImage from './img/hh1_1632716401.jpg'; // Thay đổi đường dẫn tới hình ảnh
 
 const Slider = () => {
