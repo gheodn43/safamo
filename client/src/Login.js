@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class Login extends Component {
   handleLogin = () => {
     // Xử lý đăng nhập
@@ -15,7 +15,7 @@ class Login extends Component {
           {/* Form đăng nhập */}
           <form>
             <input type="text" placeholder="Tên đăng nhập" />
-            <input type="password" placeholder="Mật khẩu" />
+            <input type="password" placeholder="Mật khẩu hehe" />
             <button onClick={this.handleLogin}>Đăng nhập</button>
           </form>
 

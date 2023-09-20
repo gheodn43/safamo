@@ -2,6 +2,7 @@
 import React from "react";
 import "./style.css";
 import "font-awesome/css/font-awesome.min.css";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
   return (

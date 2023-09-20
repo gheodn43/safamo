@@ -1,6 +1,7 @@
 // RoomCards.js
 import React from 'react';
 import './style.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import room1 from './img/hh1_1632716401.jpg';
 import room2 from './img/hh2_1632716407.jpg';
 import room3 from './img/z3362480429968-e7d46d5407eaabb7f518f912e5c80763_1650730635.jpg';
