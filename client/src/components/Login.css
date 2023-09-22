@@ -1,0 +1,123 @@
+form {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #dfd9df, #1187a1);
+}
+
+.login-title {
+    font-size: x-large;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1187a1;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: gray;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button {
+  background-color: #09a6d1;
+  color: whitesmoke;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px; /* Add spacing between buttons */
+}
+
+.submit-button:hover {
+  background-color: #087a97;
+}
+
+.google-button {
+  background-color: #dc4e41;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px; /* Add spacing between buttons */
+}
+
+.google-button:hover {
+  background-color: #c1372b;
+}
+
+
+.facebook-login-button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.facebook-login-button:hover {
+  background-color: #0e5a8a;
+}
+
+.facebook-login-info {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.register-link {
+  padding-top: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+
+}
+.forgot-password-link {
+  padding-top: 30px;
+  color: #333;
+  cursor: pointer;
+}
