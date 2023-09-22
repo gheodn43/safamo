@@ -1,7 +1,8 @@
 // Login.js
 import React, { useState } from 'react';
 import './Login.css';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import RegistrationForm from './Register';
 // import FacebookLoginComponent from './FacebookLogin'; 
 // import GmailLoginComponent from './GmailLoginComponent';
 
@@ -12,26 +13,21 @@ function Login() {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   // const [loggedInWithFacebook, setLoggedInWithFacebook] = useState(false); 
   // const [loggedInWithGmail, setLoggedInWithGmail] = useState(false); // State to track if logged in with Gmail
-  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your logic to handle form submission goes here
-    // ...
-
-    // Redirect to home page after login
-    history.push('/');
   };
 
+  // Code này để link tới các link
   const handleRegisterClick = () => {
-    setShowRegistrationForm(true);
-    window.location.href = 'http://localhost:3000/login/register';
+    setShowRegistrationForm(!showRegistrationForm);
+    window.location.href = 'http://localhost:3000/register';
   };
 
   
   const handleForgotPassword = () => {
     setShowForgotPasswordForm(true);
-    window.location.href = 'http://localhost:3000/login/forgot-password';
+    window.location.href = 'http://localhost:3000/forgot-password';
     
   };
 
@@ -39,7 +35,11 @@ function Login() {
     window.location.href = 'http://localhost:3000';
     
   };
+
+  
   return (
+
+    // Code tạo form login
     <form className="form" onSubmit={handleSubmit}>
       <span className="login-title">Login Form</span>
       <div className="form-group">
@@ -67,6 +67,9 @@ function Login() {
         Sign In
       </button>
       </div>
+      
+      {/* Mấy cái em comment mà cục cục thì để đó do em để sẵn sau chèn chức năng sau vào sẽ cần dùng */}
+
 {/* 
       <GmailLoginComponent setLoggedInWithFacebook={setLoggedInWithGmail} /> */}
 
@@ -93,12 +96,14 @@ function Login() {
       )}
 
 <div className="register-link" onClick={handleRegisterClick}>
-        <span>Don't have an account? </span>
+<Link to="/register">Don't have an account?</Link>
+        
       </div>
 
       {showRegistrationForm && (
         /* Render your registration form here */
         <div className="registration-form">
+           <RegistrationForm />
           {/* Include your registration form components and logic here */}
         </div>
       )}

@@ -7,7 +7,8 @@ import RoomCards from './RoomCards';
 import Footer from './Footer';
 import Login from './components/Login';
 import AccountManagement from './components/AccountManagement'; // Import the Account Management component
-
+import RegistrationForm from './components/Register';
+import ForgotPasswordForm from './components/ForgotPassword';
 import './style.css';
 import './bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,7 +18,10 @@ function App() {
       <div>
         <Switch>
           <Route path="/login" component={Login} />
+          <Route path="/register" component={RegistrationForm} />
+          <Route path="/forgot-password" component={ForgotPasswordForm} />
           <Route exact path="/" component={Home} />
+          
         </Switch>
       </div>
     </Router>
