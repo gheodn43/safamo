@@ -1,29 +1,44 @@
-import React, { useState } from "react";
-import "./Login.css";
+// Login.js
+import React, { useState } from 'react';
+import './Login.css';
+import { useHistory } from 'react-router-dom';
+// import FacebookLoginComponent from './FacebookLogin'; 
+// import GmailLoginComponent from './GmailLoginComponent';
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showForgotPasswordForm, setShowForgotPasswordForm] = useState(false);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  // const [loggedInWithFacebook, setLoggedInWithFacebook] = useState(false); 
+  // const [loggedInWithGmail, setLoggedInWithGmail] = useState(false); // State to track if logged in with Gmail
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Your logic to handle form submission goes here
     // ...
+
+    // Redirect to home page after login
+    history.push('/');
   };
 
-  const handleGoogleLogin = () => {
-    // Your logic to handle Google sign in goes here
-    // ...
+  const handleRegisterClick = () => {
+    setShowRegistrationForm(true);
+    window.location.href = 'http://localhost:3000/login/register';
   };
-  const handleFacebookLogin = () => {
+
+  
+  const handleForgotPassword = () => {
+    setShowForgotPasswordForm(true);
+    window.location.href = 'http://localhost:3000/login/forgot-password';
     
   };
 
-  const handleForgotPassword = () => {
-    // Your logic to handle forgot password goes here
-    // ...
+  const handleSigninClick = () => {
+    window.location.href = 'http://localhost:3000';
+    
   };
-
   return (
     <form className="form" onSubmit={handleSubmit}>
       <span className="login-title">Login Form</span>
@@ -47,25 +62,48 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
+      <div className="sign-in" onClick={handleSigninClick}>
       <button className="submit-button" type="submit">
         Sign In
       </button>
+      </div>
+{/* 
+      <GmailLoginComponent setLoggedInWithFacebook={setLoggedInWithGmail} /> */}
 
-      <button className="google-button" onClick={handleGoogleLogin}>
-        Sign In with Google
-        <span className="fa fa-google"></span>
-      </button>
-      <button className="facebook-button" onClick={handleFacebookLogin}>
-        Sign In with facebook
-        <span className="fa fa-facebook"></span>
-      </button>
-      <p className="forgot-password">
-  <a href="#sign-in" onClick={handleForgotPassword}>
-    Forgot Password
-  </a>
-</p>
 
+      {/* <FacebookLoginComponent setLoggedInWithFacebook={setLoggedInWithFacebook} />
+
+      {loggedInWithFacebook && (
+        <div className="facebook-login-info">
+        <p>You are logged in with Facebook.</p>
+      </div>
+      )} */}
+
+      
+
+<div className="forgot-password-link" onClick={handleForgotPassword}>
+        <span>Forgot Password?</span>
+      </div>
+
+      {showForgotPasswordForm && (
+        /* Render your registration form here */
+        <div className="forgot-password-form">
+          {/* Include your registration form components and logic here */}
+        </div>
+      )}
+
+<div className="register-link" onClick={handleRegisterClick}>
+        <span>Don't have an account? </span>
+      </div>
+
+      {showRegistrationForm && (
+        /* Render your registration form here */
+        <div className="registration-form">
+          {/* Include your registration form components and logic here */}
+        </div>
+      )}
     </form>
   );
 }
-export default Login
+
+export default Login;

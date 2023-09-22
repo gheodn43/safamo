@@ -1,23 +1,23 @@
-// Import necessary components and styles
+// App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Slider from './Slider'; 
 import RoomCards from './RoomCards';
 import Footer from './Footer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/Login';
+import AccountManagement from './components/AccountManagement'; // Import the Account Management component
+
 import './style.css';
 import './bootstrap/dist/css/bootstrap.min.css';
-
-// Other code
 
 function App() {
   return (
     <Router>
       <div>
         <Switch>
-          <Route path="/login" component={Login} /> {/* Route for Login */}
-          <Route exact path="/" component={Home} /> {/* Route for Home */}
+          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </div>
     </Router>
@@ -30,7 +30,7 @@ const Home = () => (
     <Slider />
     <RoomCards/>
     <Footer/>
-    {/* Add other components for home as needed */}
+    <AccountManagement /> {/* Display account management on the home page */}
   </div>
 );
 

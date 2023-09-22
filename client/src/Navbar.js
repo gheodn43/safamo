@@ -3,6 +3,7 @@ import './style.css';
 import logo from './img/logo.png';
 import { Link } from 'react-router-dom';
 import './components/Login';
+// import AccountManagement from './components/AccountManagement';
 
 const Navbar = ({ isLoggedIn }) => {
   const handleLogoClick = () => {
@@ -12,11 +13,6 @@ const Navbar = ({ isLoggedIn }) => {
     window.location.href = 'http://localhost:3000/login';
   };
 
-  // const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
-
-  // const toggleAccountDropdown = () => {
-  //   setIsAccountDropdownOpen(!isAccountDropdownOpen);
-  // };
 
   return (
     <div className="navbar">
@@ -28,24 +24,12 @@ const Navbar = ({ isLoggedIn }) => {
       </div>
       <Link to='/manage-rentals'>Manage Rentals</Link>
       <Link to='/favourite'>Favourite</Link>
-      <div className="logo" onClick={handleSigninClick}>
+      <div className="sign-in" onClick={handleSigninClick}>
       <Link to="/login">Sign In</Link>
+      {/* <ul>
+        <li><AccountManagement /></li> 
+      </ul> */}
       </div>
-      {/* <div className="account-dropdown">
-        <button onClick={toggleAccountDropdown}>Account</button>
-        {isAccountDropdownOpen && (
-          <div className="dropdown ">
-            <div class="dropbtn">
-            <Link to='/Profile'>Profile</Link>
-            <Link to='/my-room'>My Room</Link>
-            <Link to='/finding-room'>Finding Room</Link>
-            <Link to='/shared'>Shared</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/logout'>Logout</Link>
-          </div>
-          </div>
-        )}
-      </div> */}
     </div>
   );
 };
