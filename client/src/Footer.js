@@ -2,6 +2,7 @@
 import React from "react";
 import "./style.css";
 import "font-awesome/css/font-awesome.min.css";
+import "bootstrap-social"
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Về chúng tôi</h3>
+            <h3>About us</h3>
             <p>
               This is the website about motel rooms with the best market in Ngu
               Hanh Son district, Da Nang city
@@ -17,8 +18,8 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <h3>Liên hệ với chúng tôi</h3>
-            <p>Email: pnamhuynhle@gmail.com</p>
+            <h3>Contact with us</h3>
+            <p>Email: safamofall2023@gmail.com</p>
             <p>Phone: 0775420232</p>
             
             {/* Logo Facebook */}
