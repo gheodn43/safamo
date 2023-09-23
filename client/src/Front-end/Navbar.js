@@ -1,8 +1,8 @@
 import React from 'react';
-import './style.css';
-import logo from './img/logo.png';
+import '../css/style.css';
+import logo from '../img/logo.png';
 import { Link } from 'react-router-dom';
-import './components/Login';
+import '../components/Login/Login';
 // import AccountManagement from './components/AccountManagement';
 
 const Navbar = ({ isLoggedIn }) => {

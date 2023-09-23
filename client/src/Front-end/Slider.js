@@ -1,6 +1,6 @@
 import React from 'react';
-import './style.css';
-import sliderImage from './img/hh1_1632716401.jpg'; // Thay đổi đường dẫn tới hình ảnh
+import '../css/style.css';
+import sliderImage from '../img/hh1_1632716401.jpg'; // Thay đổi đường dẫn tới hình ảnh
 
 const Slider = () => {
   return (

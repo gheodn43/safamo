@@ -1,10 +1,10 @@
 import React from 'react';
-import './style.css';
-import room1 from './img/hh1_1632716401.jpg';
-import room2 from './img/hh2_1632716407.jpg';
-import room3 from './img/z3362480429968-e7d46d5407eaabb7f518f912e5c80763_1650730635.jpg';
-import room4 from './img/hh5_1632716410.jpg';
-import './bootstrap/dist/css/bootstrap.min.css';
+import '../css/style.css';
+import room1 from '../img/hh1_1632716401.jpg';
+import room2 from '../img/hh2_1632716407.jpg';
+import room3 from '../img/z3362480429968-e7d46d5407eaabb7f518f912e5c80763_1650730635.jpg';
+import room4 from '../img/hh5_1632716410.jpg';
+import '../bootstrap/dist/css/bootstrap.min.css';
 import MapContainer from './MapContainer';
 
 const RoomCards = () => {
@@ -73,7 +73,7 @@ const RoomCards = () => {
       </section>
      {/* Google Maps Section */}
      <section className="google-maps">
-        <h2 className="chu">Google Maps - Quan Ngũ Hành Sơn, Đà Nẵng</h2>
+        <h2 className="chu">Google Maps - Ngũ Hành Sơn, Đà Nẵng</h2>
         <MapContainer />
       </section>
     

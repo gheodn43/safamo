@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import './style.css'; 
+import '../css/style.css'; 
 
 const MapContainer = () => {
   const mapStyles = {

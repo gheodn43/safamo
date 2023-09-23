@@ -1,6 +1,6 @@
 // Footer.js
 import React from "react";
-import "./style.css";
+import "../css/style.css";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap-social"
 

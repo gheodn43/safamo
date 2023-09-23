@@ -1,16 +1,16 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './Navbar';
-import Slider from './Slider'; 
-import RoomCards from './RoomCards';
-import Footer from './Footer';
-import Login from './components/Login';
-import AccountManagement from './components/AccountManagement'; // Import the Account Management component
-import RegistrationForm from './components/Register';
-import ForgotPasswordForm from './components/ForgotPassword';
-import './style.css';
-import './bootstrap/dist/css/bootstrap.min.css';
+import Navbar from '../Front-end/Navbar';
+import Slider from '../Front-end/Slider'; 
+import RoomCards from '../Front-end/RoomCards';
+import Footer from '../Front-end/Footer';
+import Login from '../components/Login/Login';
+// import AccountManagement from './components/AccountManagement'; 
+import RegistrationForm from '../components/Login/Register';
+import ForgotPasswordForm from '../components/Login/ForgotPassword';
+import '../css/style.css';
+import '../bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ const Home = () => (
     <Slider />
     <RoomCards/>
     <Footer/>
-    <AccountManagement /> {/* Display account management on the home page */}
+    {/* <AccountManagement /> */}
   </div>
 );
 
